@@ -2,11 +2,12 @@
 
 var React = require('react-native');
 var Login = require('./Components/Login.ios');
+var Dashboard = require('./Components/Dashboard.ios');
 
 var {
   AppRegistry,
   StyleSheet,
-  NavigatorIOS
+  Navigator
 } = React;
 
 var styles = StyleSheet.create({
@@ -17,15 +18,21 @@ var styles = StyleSheet.create({
 });
 
 var ColCacchio = React.createClass({
+  renderScene: function(route, nav) {
+    switch (route.id) {
+      case 'login':
+        return <Login />;
+      default:
+        return <Dashboard />;
+    }
+  },
+
   render: function() {
     return (
-      <NavigatorIOS
-        style = {styles.container}
-        navigationBarHidden = {true}
-        initialRoute = {{
-          component: Login,
-          title: 'Login'
-        }}
+      <Navigator
+        style={styles.container}
+        initialRoute={{ id: 'login' }}
+        renderScene={this.renderScene}
       />
     );
   }
