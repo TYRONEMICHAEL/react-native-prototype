@@ -66,5 +66,10 @@ module.exports = StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
     fontWeight: '300'
+  },
+  logo:{
+    backgroundColor: 'rgba(0,0,0,0)',
+    width: 200,
+    height: 76
   }
 });

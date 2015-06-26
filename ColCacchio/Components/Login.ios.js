@@ -53,12 +53,8 @@ var Login = React.createClass({
       <View style={baseStyles.container}>
         <Image source={require('image!bg-pizza')} style={baseStyles.backgroundImage}>
           <View style={styles.introContainer}>
-            <Text style={[baseStyles.baseFont, baseStyles.fontBold, styles.title]}>
-              PIZZA MASTERS
-            </Text>
-            <Text style={[baseStyles.baseFont, styles.title, styles.titleBottom]}>
-              SINCE '92
-            </Text>
+            <Image source={require('image!logo')} style={baseStyles.logo} />
+
             <View style={baseStyles.borderTop}>
               <Text style={[baseStyles.baseFont, styles.intro]}>
                 Say hello to our <Text style={baseStyles.fontBold}>Loyalty Program</Text> - the best and easiest way to receive

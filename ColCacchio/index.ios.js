@@ -31,7 +31,7 @@ var ColCacchio = React.createClass({
     return (
       <Navigator
         style={styles.container}
-        initialRoute={{ id: 'login' }}
+        initialRoute={{ id: 'dashboard' }}
         renderScene={this.renderScene}
       />
     );
